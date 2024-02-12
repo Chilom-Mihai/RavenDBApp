@@ -1,0 +1,11 @@
+{
+  "DataDir": "RavenData",
+  "License.Eula.Accepted": true,
+  "Security.Certificate.LetsEncrypt.Email": "mihai.chilom@omeron.co",
+  "Setup.Mode": "LetsEncrypt",
+  "Security.Certificate.Path": "C:\\Users\\OMRDev\\Desktop\\RavenDB\\Server\\cluster.server.certificate.photographerapp.pfx",
+  "ServerUrl": "https://127.0.0.1",
+  "ServerUrl.Tcp": "tcp://127.0.0.1:38888",
+  "PublicServerUrl": "https://a.photographerapp.ravendb.community",
+  "PublicServerUrl.Tcp": "tcp://a.photographerapp.ravendb.community:38888"
+}

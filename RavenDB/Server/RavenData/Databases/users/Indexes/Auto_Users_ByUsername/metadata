@@ -1,0 +1,1 @@
+{"Name":"Auto/Users/ByUsername","Version":60000,"Collections":["Users"],"LockMode":0,"Priority":1,"State":0,"ArchivedDataProcessingBehavior":null,"MapFields":[{"Name":"Username","Indexing":"Default","Aggregation":0,"Spatial":null,"HasSuggestions":false,"HasQuotedName":false,}]}

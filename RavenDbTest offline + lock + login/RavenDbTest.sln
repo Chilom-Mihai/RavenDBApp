@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RavenDbTest", "RavenDbTest\RavenDbTest.csproj", "{D3E56265-58DD-4FDA-BF22-671F834F7357}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DefaultBuild|Any CPU = DefaultBuild|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3E56265-58DD-4FDA-BF22-671F834F7357}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{D3E56265-58DD-4FDA-BF22-671F834F7357}.All|Any CPU.Build.0 = Release|Any CPU
+		{D3E56265-58DD-4FDA-BF22-671F834F7357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3E56265-58DD-4FDA-BF22-671F834F7357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3E56265-58DD-4FDA-BF22-671F834F7357}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3E56265-58DD-4FDA-BF22-671F834F7357}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
+		{D3E56265-58DD-4FDA-BF22-671F834F7357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3E56265-58DD-4FDA-BF22-671F834F7357}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02E94B25-5B48-4E61-81D4-CD4A6C0B4A49}
+	EndGlobalSection
+EndGlobal

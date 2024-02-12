@@ -1,0 +1,123 @@
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-12-04T08:56:18.1325079Z, 1, Operations, Server, Raven.Server.Program,  Build 60003, Version 6.0, SemVer 6.0.1, Commit 15a84b5
+ PID 8528, 64 bits, 8 Cores, Arch: X64
+ 15.771 GBytes Physical Memory, 8.277 GBytes Available Memory, 8.315 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-12-04T09:13:33.5738096Z, 50, Operations, Server, CertificateLoaderUtil, CertificateLoaderUtil.CreateCertificate - Flags used UserKeySet
+2023-12-04T09:16:31.3688931Z, 1, Operations, Server, Raven.Server.Program, Server has shut down
+2023-12-04T09:16:31.4933692Z, 1, Operations, Server, Raven.Server.RavenServer, When setting the certificate, validating that the server can authenticate with itself using https://a.photographerapp.ravendb.community.
+2023-12-04T09:16:31.7511960Z, 1, Operations, Server, Raven.Server.RavenServer, HTTPS is on. Setting up a new web host to redirect incoming HTTP traffic on port 80 to HTTPS on port 443. The new web host is listening to http://127.0.0.1/
+2023-12-04T09:16:31.8798970Z, 75, Operations, Server, Raven.Server.RavenServer, Successful connection to https://a.photographerapp.ravendb.community.
+2023-12-04T09:17:31.9415248Z, 59, Operations, Server, Raven.Server.RavenServer, Renew check: still have time left to renew the server certificate with thumbprint `343799B23792107D108AEF4B63C568AC1372272A`, estimated renewal date: 02/03/2024 08:13:31
+2023-12-04T10:17:31.9099244Z, 89, Operations, Server, Raven.Server.RavenServer, Renew check: still have time left to renew the server certificate with thumbprint `343799B23792107D108AEF4B63C568AC1372272A`, estimated renewal date: 02/03/2024 08:13:31
+2023-12-04T11:52:25.5323315Z, 93, Operations, Server, Raven.Server.RavenServer, Renew check: still have time left to renew the server certificate with thumbprint `343799B23792107D108AEF4B63C568AC1372272A`, estimated renewal date: 02/03/2024 08:13:31
+2023-12-04T12:52:25.5356468Z, 107, Operations, Server, Raven.Server.RavenServer, Renew check: still have time left to renew the server certificate with thumbprint `343799B23792107D108AEF4B63C568AC1372272A`, estimated renewal date: 02/03/2024 08:13:31
+2023-12-04T13:52:25.5477453Z, 40, Operations, Server, Raven.Server.RavenServer, Renew check: still have time left to renew the server certificate with thumbprint `343799B23792107D108AEF4B63C568AC1372272A`, estimated renewal date: 02/03/2024 08:13:31
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-12-04T14:28:27.7678643Z, 1, Operations, Server, Raven.Server.Program,  Build 60003, Version 6.0, SemVer 6.0.1, Commit 15a84b5
+ PID 6768, 64 bits, 8 Cores, Arch: X64
+ 15.771 GBytes Physical Memory, 8.272 GBytes Available Memory, 8.31 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-12-04T14:28:30.5147335Z, 1, Operations, Server, Raven.Server.Program, Failed to initialize the server, EXCEPTION: System.InvalidOperationException: Unable to start the server.
+ ---> System.InvalidOperationException: Unable to load the server certificate due to invalid configuration! Admin assistance required.
+ ---> System.InvalidOperationException: Could not load certificate file C:\Users\OMRDev\Desktop\RavenDB\Server\cluster.server.certificate.photographerapp.pfx
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\OMRDev\Desktop\RavenDB\Server\cluster.server.certificate.photographerapp.pfx'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.ReadAllBytes(String path)
+   at Raven.Server.ServerWide.SecretProtection.LoadCertificateFromPath(String path, String password, LicenseType licenseType, Boolean certificateValidationKeyUsages) in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\ServerWide\SecretProtection.cs:line 757
+   --- End of inner exception stack trace ---
+   at Raven.Server.ServerWide.SecretProtection.LoadCertificateFromPath(String path, String password, LicenseType licenseType, Boolean certificateValidationKeyUsages) in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\ServerWide\SecretProtection.cs:line 772
+   at Raven.Server.RavenServer.LoadCertificate() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1448
+   --- End of inner exception stack trace ---
+   at Raven.Server.RavenServer.LoadCertificate() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1464
+   at Raven.Server.RavenServer.LoadCertificateAtStartup() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1430
+   --- End of inner exception stack trace ---
+   at Raven.Server.RavenServer.LoadCertificateAtStartup() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1434
+   at Raven.Server.RavenServer.Initialize() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 162
+   at Raven.Server.Program.Main(String[] args) in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\Program.cs:line 190
+2023-12-04T14:28:30.8200271Z, 1, Operations, Server, Raven.Server.Program, 
+2023-12-04T14:28:31.0896803Z, 1, Operations, Server, Raven.Server.Program, Server has shut down
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-12-04T14:30:21.1073702Z, 1, Operations, Server, Raven.Server.Program,  Build 60003, Version 6.0, SemVer 6.0.1, Commit 15a84b5
+ PID 11876, 64 bits, 8 Cores, Arch: X64
+ 15.771 GBytes Physical Memory, 7.414 GBytes Available Memory, 7.452 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-12-04T14:30:21.2237876Z, 1, Operations, Server, Raven.Server.Program, 
+2023-12-04T14:30:21.2062304Z, 1, Operations, Server, Raven.Server.Program, Failed to initialize the server, EXCEPTION: System.InvalidOperationException: Unable to start the server.
+ ---> System.InvalidOperationException: Unable to load the server certificate due to invalid configuration! Admin assistance required.
+ ---> System.InvalidOperationException: Could not load certificate file C:\Users\OMRDev\Desktop\RavenDB\Server\cluster.server.certificate.photographerapp.pfx
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\OMRDev\Desktop\RavenDB\Server\cluster.server.certificate.photographerapp.pfx'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.ReadAllBytes(String path)
+   at Raven.Server.ServerWide.SecretProtection.LoadCertificateFromPath(String path, String password, LicenseType licenseType, Boolean certificateValidationKeyUsages) in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\ServerWide\SecretProtection.cs:line 757
+   --- End of inner exception stack trace ---
+   at Raven.Server.ServerWide.SecretProtection.LoadCertificateFromPath(String path, String password, LicenseType licenseType, Boolean certificateValidationKeyUsages) in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\ServerWide\SecretProtection.cs:line 772
+   at Raven.Server.RavenServer.LoadCertificate() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1448
+   --- End of inner exception stack trace ---
+   at Raven.Server.RavenServer.LoadCertificate() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1464
+   at Raven.Server.RavenServer.LoadCertificateAtStartup() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1430
+   --- End of inner exception stack trace ---
+   at Raven.Server.RavenServer.LoadCertificateAtStartup() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1434
+   at Raven.Server.RavenServer.Initialize() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 162
+   at Raven.Server.Program.Main(String[] args) in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\Program.cs:line 190
+2023-12-04T14:30:21.2333999Z, 1, Operations, Server, Raven.Server.Program, Server has shut down
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-12-04T14:31:07.2284531Z, 1, Operations, Server, Raven.Server.Program,  Build 60003, Version 6.0, SemVer 6.0.1, Commit 15a84b5
+ PID 16124, 64 bits, 8 Cores, Arch: X64
+ 15.771 GBytes Physical Memory, 7.482 GBytes Available Memory, 7.52 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-12-04T14:31:07.3300265Z, 1, Operations, Server, Raven.Server.Program, Failed to initialize the server, EXCEPTION: System.InvalidOperationException: Unable to start the server.
+ ---> System.InvalidOperationException: Unable to load the server certificate due to invalid configuration! Admin assistance required.
+ ---> System.InvalidOperationException: Could not load certificate file C:\Users\OMRDev\Desktop\RavenDB\Server\cluster.server.certificate.photographerapp.pfx
+ ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\OMRDev\Desktop\RavenDB\Server\cluster.server.certificate.photographerapp.pfx'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.ReadAllBytes(String path)
+   at Raven.Server.ServerWide.SecretProtection.LoadCertificateFromPath(String path, String password, LicenseType licenseType, Boolean certificateValidationKeyUsages) in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\ServerWide\SecretProtection.cs:line 757
+   --- End of inner exception stack trace ---
+   at Raven.Server.ServerWide.SecretProtection.LoadCertificateFromPath(String path, String password, LicenseType licenseType, Boolean certificateValidationKeyUsages) in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\ServerWide\SecretProtection.cs:line 772
+   at Raven.Server.RavenServer.LoadCertificate() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1448
+   --- End of inner exception stack trace ---
+   at Raven.Server.RavenServer.LoadCertificate() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1464
+   at Raven.Server.RavenServer.LoadCertificateAtStartup() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1430
+   --- End of inner exception stack trace ---
+   at Raven.Server.RavenServer.LoadCertificateAtStartup() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 1434
+   at Raven.Server.RavenServer.Initialize() in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 162
+   at Raven.Server.Program.Main(String[] args) in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\Program.cs:line 190
+2023-12-04T14:31:07.3484133Z, 1, Operations, Server, Raven.Server.Program, 
+2023-12-04T14:31:07.3587216Z, 1, Operations, Server, Raven.Server.Program, Server has shut down
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-12-04T14:31:39.8726007Z, 1, Operations, Server, Raven.Server.Program,  Build 60003, Version 6.0, SemVer 6.0.1, Commit 15a84b5
+ PID 10712, 64 bits, 8 Cores, Arch: X64
+ 15.771 GBytes Physical Memory, 9.397 GBytes Available Memory, 9.435 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-12-04T14:31:40.0078840Z, 1, Operations, Server, CertificateLoaderUtil, CertificateLoaderUtil.CreateCertificate - Flags used UserKeySet, Exportable
+2023-12-04T14:31:55.1149524Z, 1, Operations, Server, Raven.Server.RavenServer, When setting the certificate, validating that the server can authenticate with itself using https://a.photographerapp.ravendb.community.
+2023-12-04T14:31:55.3921095Z, 1, Operations, Server, Raven.Server.RavenServer, HTTPS is on. Setting up a new web host to redirect incoming HTTP traffic on port 80 to HTTPS on port 443. The new web host is listening to http://127.0.0.1/
+2023-12-04T14:31:56.1874563Z, 14, Operations, Server, Raven.Server.RavenServer, Successful connection to https://a.photographerapp.ravendb.community.
+2023-12-04T14:31:56.7960151Z, 20, Operations, A, Raven.Server.Rachis.RachisConsensus, Took way too much time (00:00:00.4614217) to change the state to LeaderElect in term 3. (Election timeout:00:00:00.3000000)
+2023-12-04T14:32:04.0415316Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+2023-12-04T14:32:04.0661880Z, 14, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-6.0\60003\src\Raven.Server\RavenServer.cs:line 2216
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-12-04T14:32:34.4229978Z, 1, Operations, Server, Raven.Server.Program,  Build 60003, Version 6.0, SemVer 6.0.1, Commit 15a84b5
+ PID 14076, 64 bits, 8 Cores, Arch: X64
+ 15.771 GBytes Physical Memory, 7.858 GBytes Available Memory, 7.897 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-12-04T14:32:34.6012753Z, 1, Operations, Server, CertificateLoaderUtil, CertificateLoaderUtil.CreateCertificate - Flags used UserKeySet, Exportable
+2023-12-04T14:32:35.3441862Z, 1, Operations, Server, Raven.Server.RavenServer, When setting the certificate, validating that the server can authenticate with itself using https://a.photographerapp.ravendb.community.
+2023-12-04T14:32:35.6308410Z, 1, Operations, Server, Raven.Server.RavenServer, HTTPS is on. Setting up a new web host to redirect incoming HTTP traffic on port 80 to HTTPS on port 443. The new web host is listening to http://127.0.0.1/
+2023-12-04T14:32:36.6472675Z, 10, Operations, Server, Raven.Server.RavenServer, Successful connection to https://a.photographerapp.ravendb.community.
+2023-12-04T14:32:38.2536238Z, 20, Operations, A, Raven.Server.Rachis.RachisConsensus, Took way too much time (00:00:01.3865528) to change the state to LeaderElect in term 4. (Election timeout:00:00:00.3000000)
+2023-12-04T14:33:36.7583611Z, 10, Operations, Server, Raven.Server.RavenServer, Renew check: still have time left to renew the server certificate with thumbprint `343799B23792107D108AEF4B63C568AC1372272A`, estimated renewal date: 02/03/2024 08:13:31
+2023-12-04T14:34:25.1602424Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
